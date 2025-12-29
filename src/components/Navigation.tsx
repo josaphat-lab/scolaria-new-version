@@ -68,19 +68,12 @@ export const Navigation: React.FC<{ onNavigate: (path: string) => void }> = ({ o
       icon: <FileText className="w-4 h-4" />,
       subItems: [
         { id: 'bulletins', label: 'Bulletins', path: '/editions/bulletins' },
+        { id: 'releve-notes', label: 'Relevé de notes', path: '/editions/releve-notes' },
         { id: 'editions-enseignants', label: 'Enseignants', path: '/editions/enseignants' },
         { id: 'editions-eleves', label: 'Élèves', path: '/editions/eleves' },
         { id: 'certificat-scolarite', label: 'Certificat de scolarité', path: '/editions/certificat' },
-        { id: 'carte-scolaire', label: 'Carte scolaire', path: '/editions/carte-scolaire' },
         { id: 'exportation-educmaster', label: 'Exportation Educmaster', path: '/editions/exportation-educmaster' },
-        {
-          id: 'bilan',
-          label: 'Bilan',
-          subItems: [
-            { id: 'bilan-etablissement', label: "Bilan d'établissement", path: '/editions/bilan/etablissement' },
-            { id: 'bilan-devoir', label: 'Bilan par devoir', path: '/editions/bilan/devoir' }
-          ]
-        },
+        { id: 'bilan', label: 'Bilan', path: '/editions/bilan' },
         { id: 'passants-doublants', label: 'Passants/Doublants/Exclus', path: '/editions/passants-doublants' },
         { id: 'statistiques-devoirs', label: 'Statistiques devoirs', path: '/editions/statistiques-devoirs' },
         { id: 'resultats-devoirs', label: 'Résultats devoirs', path: '/editions/resultats-devoirs' }

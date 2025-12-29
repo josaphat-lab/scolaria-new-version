@@ -24,9 +24,13 @@ import { FeuilleNotes } from './pages/FeuilleNotes';
 import { CahierNote } from './pages/CahierNote';
 import { ModificationNotes } from './pages/ModificationNotes';
 import { Bulletins } from './pages/Bulletins';
+import { ReleveNotes } from './pages/ReleveNotes';
 import { EditionsEnseignants } from './pages/EditionsEnseignants';
 import { EditionsEleves } from './pages/EditionsEleves';
 import { CertificatScolarite } from './pages/CertificatScolarite';
+import { ExportationEducmaster } from './pages/ExportationEducmaster';
+import { Bilan } from './pages/Bilan';
+import { PassantsDoublants } from './pages/PassantsDoublants';
 import { Layout } from './components/Layout';
 import { Placeholder } from './pages/Placeholder';
 
@@ -131,6 +135,10 @@ const AppContent = () => {
       return <Bulletins />;
     }
 
+    if (currentPath === '/editions/releve-notes') {
+      return <ReleveNotes />;
+    }
+
     if (currentPath === '/editions/enseignants') {
       return <EditionsEnseignants />;
     }
@@ -141,6 +149,18 @@ const AppContent = () => {
 
     if (currentPath === '/editions/certificat' || currentPath === '/editions/certificat/unique' || currentPath === '/editions/certificat/salle') {
       return <CertificatScolarite />;
+    }
+
+    if (currentPath === '/editions/exportation-educmaster') {
+      return <ExportationEducmaster />;
+    }
+
+    if (currentPath === '/editions/bilan') {
+      return <Bilan />;
+    }
+
+    if (currentPath === '/editions/passants-doublants') {
+      return <PassantsDoublants />;
     }
 
     const pathSegments = currentPath.split('/').filter(Boolean);
